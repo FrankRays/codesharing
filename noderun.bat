@@ -1,0 +1,1 @@
+cd nodeserver && nodemon app

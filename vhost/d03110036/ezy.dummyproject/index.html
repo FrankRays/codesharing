@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://localhost:80/codesharing/assets/lib/jquery/jquery.js"></script>
+<script>
+ var socket = io();
+ 	socket.on('editor',function(data) {
+ 		var pengirim = $('#nama').val();
+ 		if (data['pengirim'] == pengirim) {
+
+ 		} else{
+ 			$('#editor').val(data['data']);
+ 		};
+ 	});
+ 	function send () {
+
+ 		var pengirim = $('#nama').val();
+ 		var kirim = [ $('#nama').val(), $('#editor').val() ];
+ 		socket.emit('ubah', kirim);
+ 		$('#editor').addClass(pengirim);
+ 	}
+</script>
+<style type="text/css" media="screen">
+
+</style>
+</head>
+<body>
+
+<textarea id="editor" onkeyup="send()"></textarea>
+<style type="text/css">
+	#editor{
+		width: 100%;
+		height: 400px;
+	}
+</style>
+</body>
+</html>

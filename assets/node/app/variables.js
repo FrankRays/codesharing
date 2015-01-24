@@ -1,0 +1,10 @@
+var client = io('http://localhost:3000');
+var name = new Date().getTime();
+var path = "";
+var root = '../vhost/d03110036/ezy.dummyproject/';
+var file = new File();
+var folder = new Folder();
+var rc = new RightClick();
+var editor = "";
+var tab = new Tab();
+var tabs = [];

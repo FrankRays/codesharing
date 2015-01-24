@@ -1,0 +1,26 @@
+@import "../lib/bootstrap/css/bootstrap.css";
+@import "animate.css";
+@import "../lib/fa/css/fa.css";
+@import "app.css";
+@import "../lib/datatables/css/dataTables.css";
+@import "../lib/datatables/css/jquery.dataTables.css";
+@import "../lib/datatables/css/jquery.dataTables_themeroller.css";
+
+a{
+	cursor: pointer;
+}
+.nav-content{
+	width: calc(100% - 220px);
+}
+.searchbox{
+	width: 65%;
+	padding-top: 7px;
+	display: none !important;
+}
+.searchbox-expand{
+	display: block !important;
+}
+.full-width{
+	width: 100%;
+}
+
